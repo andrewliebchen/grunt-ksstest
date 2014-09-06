@@ -110,28 +110,31 @@ module.exports = function(grunt) {
 
         var messageHandlers = {
             onFail: function(test) {
-                grunt.log.writeln('Visual change found for ' + path.basename(test.filename) + ' (' + test.mismatch + '% mismatch)');
+                grunt.log.write(' ❌ ' + test.mismatch + '% ');
             },
             onPass: function(test) {
-                grunt.log.writeln('No changes found for ' + path.basename(test.filename));
+                grunt.log.write('=');
             },
             onTimeout: function(test) {
                 grunt.log.writeln('Timeout while processing ' + path.basename(test.filename));
             },
             onComplete: function(allTests, noOfFails, noOfErrors) {
-                if (allTests.length) {
-                    var noOfPasses = allTests.length - failureCount;
+                var noOfTests = allTests.length;
+
+                grunt.log.write('\n\n');
+                if (noOfTests) {
+                    var noOfPasses = noOfTests - failureCount;
                     failureCount = noOfFails + noOfErrors;
 
                     if (failureCount === 0) {
-                        grunt.log.ok('All ' + noOfPasses + ' tests passed!');
+                        grunt.log.ok('👍 All ' + noOfPasses + ' tests passed!');
                     }
                     else {
                         if (noOfErrors === 0) {
-                            grunt.log.error(noOfFails + ' tests failed.');
+                            grunt.log.error('👎 ' + noOfFails + ' of ' + noOfTests + ' tests failed.');
                         }
                         else {
-                            grunt.log.error(noOfFails + ' tests failed, ' + noOfErrors + ' had errors.');
+                            grunt.log.error('😳 ' + noOfFails + ' tests failed, ' + noOfErrors + ' had errors of ' + noOfTests + ' total tests.');
                         }
                     }
                 }
