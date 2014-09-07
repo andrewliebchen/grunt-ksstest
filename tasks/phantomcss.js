@@ -120,7 +120,6 @@ module.exports = function(grunt) {
             },
             onComplete: function(allTests, noOfFails, noOfErrors) {
                 var noOfTests = allTests.length;
-
                 grunt.log.write('\n\n');
                 if (noOfTests) {
                     var noOfPasses = noOfTests - failureCount;
@@ -146,9 +145,9 @@ module.exports = function(grunt) {
         };
 
         // Resolve paths for tests
-        options.test = [];
+        options.testElements = [];
         this.filesSrc.forEach(function(filepath) {
-            options.test.push(path.resolve(filepath));
+            options.testElements.push(path.resolve(filepath));
         });
 
         options.screenshots = path.resolve(options.screenshots);
