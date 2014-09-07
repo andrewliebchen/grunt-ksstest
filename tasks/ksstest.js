@@ -15,7 +15,7 @@ var runnerPath = path.join(__dirname, '..', 'phantomjs', 'runner.js');
 var phantomCSSPath = path.join(__dirname, '..', 'bower_components', 'phantomcss');
 
 module.exports = function(grunt) {
-	grunt.registerMultiTask('phantomcss', 'CSS Regression Testing', function() {
+	grunt.registerMultiTask('ksstest', 'CSS Regression Testing', function() {
 		var done = this.async();
 
 		var options = this.options({

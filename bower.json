@@ -1,13 +1,15 @@
 {
-  "name": "grunt-phantomcss",
-  "version": "0.2.3",
-  "homepage": "https://github.com/chrisgladd/grunt-phantomcss",
+  "name": "grunt-ksstest",
+  "version": "0.0.1",
+  "homepage": "https://github.com/andrewliebchen/grunt-ksstest",
   "authors": [
+    "Andrew Liebchen <andrewliebchen@gmail.com>",
+    "John Conley <John.C.Conley.15@dartmouth.edu>",
     "Chris Gladd <chris.m.gladd@gmail.com>",
     "Larry Davis <lazd@lazd.net>",
     "Aliaksei Sapach <dreamsonic@tut.by>"
   ],
-  "description": "A grunt task for phantomcss",
+  "description": "Visual CSS regression testing of KSS-generated styleguide components via PhantomCSS",
   "keywords": [
     "grunt",
     "phantomjs",

@@ -1,6 +1,6 @@
 {
   "name": "grunt-ksstest",
-  "description": "Visual CSS regression testing of KSS-generated styleguide components via PhantomCSS.",
+  "description": "Visual CSS regression testing of KSS-generated styleguide components via PhantomCSS",
   "version": "0.2.3",
   "homepage": "https://github.com/andrewliebchen/grunt-ksstest",
   "author": {
@@ -9,6 +9,7 @@
   },
   "contributors": [
     { "name": "John Conley", "email":"John.C.Conley.15@dartmouth.edu", "url":"https://github.com/johnconley" },
+    { "name": "Chris Gladd", "email":"chris.m.gladd@gmail.com", "url":"http://github.com/chrisgladd"},
     { "name": "Larry Davis", "email":"lazd@lazd.net", "url":"https://github.com/lazd" },
     { "name": "Aliaksei Sapach", "email":"dreamsonic@tut.by", "url":"https://github.com/asapach" }
   ],
