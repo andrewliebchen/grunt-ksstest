@@ -111,7 +111,7 @@ module.exports = function(grunt) {
 
 		var messageHandlers = {
 			onFail: function(test) {
-				grunt.log.error('❌ ' + path.basename(test.filename) + ' (' + test.mismatch + '%)');
+				grunt.log.error('❌ ' + path.basename(test.filename) + ' (' + test.mismatch + '% mismatch)');
 			},
 			onPass: function(test) {
 				grunt.log.ok('👌 ' + path.basename(test.filename));
@@ -121,7 +121,7 @@ module.exports = function(grunt) {
 			},
 			onComplete: function(allTests, noOfFails, noOfErrors) {
 				var noOfTests = allTests.length;
-				grunt.log.write('\n\n');
+				grunt.log.write('\n');
 				if (noOfTests) {
 					var noOfPasses = noOfTests - failureCount;
 					failureCount = noOfFails + noOfErrors;
