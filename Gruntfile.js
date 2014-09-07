@@ -2,7 +2,7 @@
  * grunt-ksstest
  * https://github.com/andrewliebchen/grunt-ksstest
  *
- * Copyright (c) 2013 Andrew Liebchen
+ * Copyright (c) 2014 Andrew Liebchen
  * Licensed under the MIT license.
  */
 
