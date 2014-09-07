@@ -1,8 +1,8 @@
 /*
- * grunt-phantomcss
- * https://github.com/chrisgladd/grunt-phantomcss
+ * grunt-ksstest
+ * https://github.com/andrewliebchen/grunt-ksstest
  *
- * Copyright (c) 2013 Chris Gladd
+ * Copyright (c) 2013 Andrew Liebchen
  * Licensed under the MIT license.
  */
 
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
             },
         },
 
-        // Before generating any new files, remove any 
+        // Before generating any new files, remove any
         // previously-created files.
         clean: {
             tests: ['tmp'],
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         },
 
         // Configuration to be run (and then tested).
-        phantomcss: {
+        ksstest: {
             visualTest: {
                 options: {
                     screenshots: 'fixtures/screenshots/',
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
 
     // Whenever the "test" task is run, first clean the "tmp" dir,
     // then run this plugin's task(s), then test the result.
-    grunt.registerTask('test', ['clean', 'phantomcss', 'nodeunit']);
+    grunt.registerTask('test', ['clean', 'ksstest', 'nodeunit']);
 
     // By default, lint and run all tests.
     grunt.registerTask('default', ['jshint', 'test']);
