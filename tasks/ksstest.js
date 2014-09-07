@@ -127,14 +127,14 @@ module.exports = function(grunt) {
 					failureCount = noOfFails + noOfErrors;
 
 					if (failureCount === 0) {
-						grunt.log.ok(' All ' + noOfPasses + ' tests passed!');
+						grunt.log.ok('👍 All ' + noOfPasses + ' tests passed!');
 					}
 					else {
 						if (noOfErrors === 0) {
-							grunt.log.error(' ' + noOfFails + ' of ' + noOfTests + ' tests failed.');
+							grunt.log.error('👎 ' + noOfFails + ' of ' + noOfTests + ' tests failed.');
 						}
 						else {
-							grunt.log.error(' ' + noOfFails + ' tests failed, ' + noOfErrors + ' had errors of ' + noOfTests + ' total tests.');
+							grunt.log.error('😳 ' + noOfFails + ' tests failed, ' + noOfErrors + ' had errors of ' + noOfTests + ' total tests.');
 						}
 					}
 				}
