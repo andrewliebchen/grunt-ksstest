@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "bower": "1.3.6",
-    "temporary": "0.0.8"
+    "temporary": "0.0.7"
   },
   "peerDependencies": {
     "grunt-kss": "~0.2.1",
