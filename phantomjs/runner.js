@@ -48,6 +48,12 @@ phantomcss.init({
 });
 
 // Screenshot the KSS components
+var data = require(args.testElements),
+    selector,
+    refSection,
+    name,
+    actionSelector;
+
 casper.start();
 phantomcss.turnOffAnimations();
 phantomcss.update({
@@ -65,15 +71,9 @@ phantomcss.update({
   }
 });
 
-var data = require(args.testElements),
-    selector,
-    refSection,
-    name,
-    actionSelector;
-
 function uniqueSelector (refSection, selector) {
-  return "#section-" + refSection.replace(/([.])/g,'\\.')
-          + " " + selector.replace(/([:])/g, '.pseudo-class-');
+  return '[data-ksstest-section="' + refSection.replace(/([.])/g,'.')
+          + '"] ' + selector.replace(/([:])/g, '.pseudo-class-');
 }
 
 function capture (selector, name) {
