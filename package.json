@@ -1,7 +1,7 @@
 {
   "name": "grunt-ksstest",
   "description": "Visual CSS regression testing of KSS-generated styleguide components via PhantomCSS",
-  "version": "0.2.4",
+  "version": "0.0.0",
   "homepage": "https://github.com/andrewliebchen/grunt-ksstest",
   "author": {
     "name": "Andrew Liebchen",
