@@ -111,10 +111,10 @@ module.exports = function(grunt) {
 
 		var messageHandlers = {
 			onFail: function(test) {
-				grunt.log.write(' ❌ ' + test.mismatch + '% ');
+				grunt.log.error('❌ ' + path.basename(test.filename) + ' (' + test.mismatch + '%)');
 			},
 			onPass: function(test) {
-				grunt.log.write('=');
+				grunt.log.ok('👌 ' + path.basename(test.filename));
 			},
 			onTimeout: function(test) {
 				grunt.log.writeln('Timeout while processing ' + path.basename(test.filename));
